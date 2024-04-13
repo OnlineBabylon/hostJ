@@ -24,7 +24,8 @@ def fetch_journalists():
     journalists_info = []
 
     if 'articles' in response:
-        article = response['articles'][0]  # Only first article
+        article = response['articles'] 
+        # [0]  # Only first article
         if 'author' in article and article['author'] is not None:
             article_info = {
                 'author': article['author'],
