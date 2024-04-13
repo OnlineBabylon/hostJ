@@ -1,4 +1,3 @@
-// src/App.js
 import React, { useState } from 'react';
 import SearchBar from './components/SearchBar';
 import JournalistCard from './components/JournalistCard';
@@ -8,7 +7,7 @@ const App = () => {
   
   const fetchJournalists = async (query) => {
     try {
-      const response = await fetch(`https://filthy-reeba-saelent.koyeb.app/fetch_journalists?query=${query}&language=en`);
+      const response = await fetch(`https://filthy-reeba-saelent.koyeb.app/fetch_journalists?query=${query}&language=en&page_size=10`);
       const data = await response.json();
       // Assuming the response is an array of journalist objects
       setJournalists(data);
